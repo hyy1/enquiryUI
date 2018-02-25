@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "价格分布",
+  "usingComponents": {
+    "component-switching": "/components/switching/switching",
+    "component-searching": "/components/searching/searching",
+    "component-no-data": "/components/noData/noData"
+  }
+}

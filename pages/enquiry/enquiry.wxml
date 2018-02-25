@@ -1,0 +1,32 @@
+<!--pages/enquiry/enquiry.wxml-->
+<view class="enquiry {{isFixed ? 'fixed' : ''}}">
+  <view class="time-group">
+  <view class="time-range">
+    <picker mode="date" value="{{timeSearch.startTime}}" class="{{timeSearch.startTime ? 'ac' : ''}} start-time" start="{{defaultTime.start}}" end="{{defaultTime.end}}" bindchange="startTimeChange">
+      <view class="weui-input">{{timeSearch.startTime ? timeSearch.startTime : '开始日期'}}<view class="arrow-drop"></view></view>
+    </picker>
+    <text class="txt">至</text>
+    <picker mode="date" value="{{timeSearch.endTime}}" class="{{timeSearch.endTime ? 'ac' : ''}} end-time" start="{{defaultTime.start}}" end="{{defaultTime.end}}" bindchange="endTimeChange">
+      <view class="weui-input">{{timeSearch.endTime ? timeSearch.endTime : '结束日期'}}<view class="arrow-drop"></view></view>
+    </picker>
+  </view>
+  <component-date-control active="{{timeActive}}" add="{{addData}}" bindgetTime="getTimeEnquiry" />
+  </view>
+
+  <component-trading data="{{areaData}}"></component-trading>
+
+  <component-screening bindgetScreening="getScreening"></component-screening>
+
+  <view class='list'>
+    <itemEnquiry wx:for="{{list}}" wx:key="{{index}}" item="{{item}}"></itemEnquiry>
+  </view>
+  <view wx:if="{{list.length > 0 && (list.length == count) && isshowFooter}}" class="bottom-line">
+    <view class="line"></view>
+    <view class="line-txt">我是有底线的</view>
+    <view class="line"></view>
+  </view>
+  <view wx:if="{{list.length == 0}}" class="no-data">
+    <image src="{{CDN}}record_no.png" class="img" />
+    <text class="txt">{{msgStr}}</text>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+<!--pages/personal/personal.wxml-->
+<view class='container'>
+  <view class='top'>
+    <view class='img-box'>
+      <view class='default_heads'>
+         <image src='{{avatarUrl}}' class='img'/> 
+      </view>
+    </view>
+      <button wx:if="{{!info.login}}" bindtap='login' class='login_btn'>登录</button>  
+      <text wx:if="{{info.login}}" class='text'>{{companyName}}</text>  
+  </view>
+  <view class='list-box' wx:if="{{isShowCompany}}">
+    <view class='list list1 margin-bottom20' bindtap="toCompany">
+      <view class='horizontal_alignment'>
+        <image src='{{CDN}}icon_company.png' class='icon'/>
+        <text class='list_text'>我的公司</text>
+      </view>
+      <image src='{{CDN}}icon_right.png' class='icon_right'/>
+    </view>
+  </view>
+
+  <button open-type="contact" class='list-box contact_btn'>
+    <view class='list list1'>
+      <view class='horizontal_alignment'>
+        <image src='{{CDN}}icon_zxkf.png' class='icon'/>
+        <button plain="true" open-type="contact" class='list_text contact_text'>在线咨询客服</button>
+      </view>
+      <button plain="true" open-type="contact" class='contact_text contact_icon'>
+        <image src='{{CDN}}icon_right.png' class='icon_right'/>
+      </button>
+    </view>
+  </button>
+
+  <view class='list-box' wx:for="{{services}}" wx:for-index="index"  wx:for-item="item" wx:key="index">
+    <view class='list list2' data-phone="{{item.phone}}" bindtap='callPhone'>
+      <view class='list_phone_box'>
+        <image src='{{CDN}}icon_phone.png' class='icon'/>
+        <view class='list_phone_text'>
+          <text class='list_text'>客服电话：{{item.phone}}</text>
+          <text class='desc'>（服务时间：9:00-21:00）</text>
+        </view>
+      </view>
+      <image src='{{CDN}}icon_right.png' class='icon_right'/>
+    </view>
+  </view>
+
+  <view class='tc_btn_box' wx:if="{{info.login}}">
+    <button class='gradient-bg tc_btn' bindtap='logOut'>退  出</button>
+  </view>
+  <!-- <view class='tc_btn_box' wx:else>
+    <button style="" class='gradient-bg tc_btn' bindtap='toggleHandle'>切换体验版</button>
+  </view> -->
+</view>

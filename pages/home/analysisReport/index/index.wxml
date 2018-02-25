@@ -1,0 +1,115 @@
+<component-analysis-report active="0" bindselectReport="selectReport"></component-analysis-report>
+<component-no-data text="小喜正在统计中，敬请期待噢～" wx:if="{{!params.allAmount}}"></component-no-data>
+<view class="wrap" hidden="{{!params.allAmount}}">
+    
+    <!-- <view class="top" style="z-index:1;">{{reportName}}询盘统计报告</view> -->
+    <view class="circle">
+        <canvas class="more" canvas-id="canvasCircles"></canvas>
+        <canvas class="more" canvas-id="canvasCircle"></canvas>
+        <canvas class="more" canvas-id="canvasArcCir"></canvas>
+        <view class="more circles" wx:if="{{current==0}}">
+            <view>
+                <view class="circleone">
+                    <text>{{params.gmvPercent}}</text> %
+                </view>
+                <view class="circletwo">成交占比</view>
+            </view>
+        </view>
+
+        <!-- <view class="more circles" wx:if="{{current==1}}">
+            <view>
+                <view class="circleone">
+                    <text>{{params.effectivePercent}}</text> %
+                </view>
+                <view class="circletwo">有效询盘占比</view>
+            </view>
+        </view> -->
+
+        <!-- <view class="more circles bottom" wx:if="{{current==0}}">
+            <view class="ONE"></view>
+            <view class="TWO"></view>
+        </view>
+        <view class="more circles bottom" wx:if="{{current==1}}">
+            <view class="TWO"></view>
+            <view class="ONE"></view>
+        </view> -->
+    </view>
+    <swiper class="circle-box" bindchange="currentChange">
+        <block>
+            <swiper-item>
+            </swiper-item>
+            <!-- <swiper-item>
+            </swiper-item> -->
+        </block>
+    </swiper>
+    <view class="mainS">
+        <view class="deal" wx:if="{{current==0}}">
+            <view class="block" wx:if="{{params.allAmount!=0}}">
+                <view class="pic">
+                    <image src="{{images.totalValue}}" />
+                </view>
+                <view class="name"> {{enquireName.totalValue}} </view>
+                <view class="prc">￥{{params.allAmount}}</view>
+                <view class="num">{{params.allAmountCount}} 笔</view>
+            </view>
+            <view class="block" wx:if="{{params.gmvAmount!=0}}">
+                <view class="pic">
+                    <image src="{{images.tranValue}}" />
+                </view>
+                <view class="name"> {{enquireName.tranValue}} </view>
+                <view class="prc">￥{{params.gmvAmount}}</view>
+                <view class="num">{{params.gmvAmountCount}} 笔</view>
+            </view>
+            <view class="block" wx:if="{{params.followAmount!=0}}">
+                <view class="pic">
+                    <image src="{{images.enquireValue}}" />
+                </view>
+                <view class="name"> {{enquireName.enquireValue}} </view>
+                <view class="prc">￥{{params.followAmount}}</view>
+                <view class="num">{{params.followAmountCount}} 笔</view>
+            </view>
+            <view class="block" wx:if="{{params.lossAmount!=0}}">
+                <view class="pic">
+                    <image src="{{images.lossCount}}" />
+                </view>
+                <view class="name"> {{enquireName.lossValue}} </view>
+                <view class="prc"> ￥{{params.lossAmount}} </view>
+                <view class="num">{{params.lossAmountCount}} 笔</view>
+            </view>
+            <view class="block" wx:if="{{params.effective!=0}}">
+                <view class="pic">
+                    <image src="{{images.gmvCount}}" />
+                </view>
+                <view class="name"> {{enquireName.gmvCount}} </view>
+                <view class="prc"> {{params.effective}}次</view>
+                <view class="num"></view>
+            </view>
+        </view>
+        <!-- <view class="loss" wx:if="{{current==1}}">
+                <view class="block">
+                        <view class="pic">
+                            <image src="{{images.allCount}}" />
+                        </view>
+                        <view class="name"> {{enquireName.allCount}} </view>
+                        <view class="prc"></view>
+                        <view class="num red">{{params.enquiryCount}}</view>
+                    </view>
+                    <view class="block">
+                        <view class="pic">
+                            <image src="{{images.gmvCount}}" />
+                        </view>
+                        <view class="name">{{enquireName.gmvCount}} </view>
+                        <view class="prc"></view>
+                        <view class="num red">{{params.effective}}</view>
+                    </view>
+                    <view class="block">
+                        <view class="pic">
+                            <image src="{{images.lossCount}}" />
+                        </view>
+                        <view class="name"> {{enquireName.lossCount}} </view>
+                        <view class="prc"></view>
+                        <view class="num red">{{params.garbage}}</view>
+                    </view>
+        </view> -->
+    </view>
+</view>

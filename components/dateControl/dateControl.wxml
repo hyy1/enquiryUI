@@ -1,0 +1,8 @@
+<!--components/dateControl/dateControl.wxml-->
+ <view wx:if="{{type == 'tab'}}" class="date-control">
+  <view wx:for="{{data}}" wx:key="{{index}}" data-index="{{index}}" bindtap='clickHandle' class="{{active == index ? 'gradient-bg' : ''}} control-item">{{item.label}}</view>
+</view> 
+<view wx:if="{{type == 'action'}}" class="date-control-1">
+  <!-- <text class="text">时间筛选</text> -->
+  <a class="time" bindtap="open">{{data[active].label}}<image class='img' src="{{CDN+'icon_time_triangle1.png'}}"></image></a>
+</view>

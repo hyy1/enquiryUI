@@ -1,0 +1,95 @@
+<view class='top'>
+  <view class='headerLeft'>
+    <view class='money'>{{saleStatusAmount[saleStatus]}}金额：
+      <text class='moneyA'>￥{{amount}}</text>
+    </view>
+    <view class='status'>跟单状态：
+      <text class='statusA'>{{saleStatusName[saleStatus]}}</text>
+    </view>
+    <view class='buyer'>买家旺旺：
+      <text class='buyerA'>{{aliTM || ''}}</text>
+    </view>
+  </view>
+  <view class='{{saleStatusClass[saleStatus]}}'></view>
+</view>
+
+<view class='content mains'>
+  <view wx:for="{{list}}" wx:key="idx" wx:for-index="idx" wx:for-item="itemName" class="{{idx == acIndex && toggle[idx].isDB ? 'ac' : ''}} record">
+    <view class='recordP' data-index="{{idx}}" bindtap='extendHandle'>
+      <text class='recordT'>跟单记录 {{params.count - idx}}</text>
+      <view class="recordP-right">
+        <text class='time'>{{itemName.gmtCreate || ''}} </text>
+        <image data-index="{{idx}}" class="img" src='{{CDN}}icon_right.png'></image>
+      </view>
+    </view>
+    <view class="record-section">
+      <view class='recordUl'>
+        <view class='recordList'>
+          <text class='statusL'>买家类型：</text>
+          <text class='statusR'>{{itemName.buyerType || ''}}</text>
+        </view>
+        <view class='recordList'>
+          <text class='statusL'>买家职位：</text>
+          <text class='statusR'>{{itemName.position || ''}}</text>
+        </view>
+        <view class='recordList' data-phone="{{itemName.phone}}" bindtap='callPhone'>
+          <text class='statusL'>联系方式：</text>
+          <text class='statusR txt-phone'>{{itemName.phone || ''}}</text>
+          <view class='pic pic-phone' wx:if="{{itemName.phone.length > 0 && itemName.phone !== '无'}}"><image src="{{CDN}}call_phone.png" /></view>
+        </view>
+        <view class='recordList'>
+          <text class='statusL'>买家地址：</text>
+          <text class='statusR'>{{itemName.cityName || ''}}</text>
+        </view>
+        <view class='recordList'>
+          <text class='statusL'>加 微 信：</text>
+          <text class='statusR'>{{isWechatName[itemName.isWechat]}}</text>
+        </view>
+      </view>
+      <view class='recordUl'>
+        <view class='recordList'>
+          <text class='statusL'>产　　品：</text>
+          <text class='statusR'>{{itemName.productName || ''}}</text>
+        </view>
+        <view class='recordList'>
+          <text class='statusL'>数　　量：</text>
+          <text class='statusR'>{{itemName.num}}</text>
+        </view>
+        <view class='recordList'>
+          <text class='statusL'>产品报价：</text>
+          <text class='statusR'>{{itemName.price}}</text>
+        </view>
+        <view class='recordList'>
+          <text class='statusL'>买家意向：</text>
+          <text class='statusR'>{{buyerIntentionName[itemName.buyerIntention]}}</text>
+        </view>
+      </view>
+      <view class='recordUl'>
+        <view class='recordList'>
+          <text class='statusL'>同行报价：</text>
+          <text class='statusR'>{{itemName.peerPrice}}</text>
+        </view>
+        <view class='recordList'>
+          <text class='statusL'>未成交原因：</text>
+          <text class='statusR'>{{itemName.noDealReason || ''}}</text>
+        </view>
+        <view class='recordList'>
+          <text class='statusL'>有无去同行购买：</text>
+          <text class='statusR'>{{peerBuyName[itemName.peerBuy]}}</text>
+        </view>
+        <view class='recordList'>
+          <text class='statusL'>同 行 名：</text>
+          <text class='statusR'>{{itemName.peerName || ''}}</text>
+        </view>
+        <view class='recordList'>
+          <text class='statusL'>备　　注：</text>
+          <text class='statusR'>{{itemName.remark || ''}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{list.length == 0}}" class="no-data">
+    <image src="{{CDN}}record_no.png" class="img" />
+    <text class="txt">抱歉!没有找到符合条件的记录</text>
+  </view>
+</view>

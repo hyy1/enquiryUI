@@ -1,0 +1,23 @@
+<!--components/itemProduct1/itemProduct.wxml-->
+<view class="item-product">
+  <view class="mess">
+    <view class="order-img" wx:if="{{order < 3}}"><image src="{{CDN}}/icon_gold_{{order}}.png"></image></view>
+    <view class="order" wx:else>{{order+1}}</view>
+    <image class='img' src='{{item.imgUrl}}'></image>
+    <view class="text">
+      <view class="text-p">{{item.title}}</view>
+      <view class="text-company">{{item.comName}}</view>
+      <text class="money">¥{{item.price}}</text>
+    </view>
+  </view>
+  <view class="index">
+    <view wx:if="{{item.trend}}" class="trend">
+      <text>交易趋势</text>
+      <text class="number">{{item.trend}}</text>
+      <image wx:if="{{item.sign == 1}}" class="img" src="{{CDN}}/icon_rise_arrow.png"></image>
+      <image wx:else class="img" src="{{CDN}}/icon_rise_down.png"></image>
+    </view>
+    <text>交易指数</text>
+    <text class="number">{{item.trade}}</text>
+  </view>
+</view>

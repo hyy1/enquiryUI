@@ -1,0 +1,17 @@
+<!--pages/enquiry/time/time.wxml-->
+<view class="enquiry-time">
+    <view class="time-choise">
+        <view class="time-range">
+            <picker fields="{{fields}}" mode="date" value="{{time.startTime}}" class="{{time.startTime ? 'ac' : ''}} start-time" start="{{defaultTime.start}}" end="{{defaultTime.end}}" bindchange="startTimeChange">
+                <view class="weui-input">{{time.startTime ? time.startTime : '开始日期'}}</view>
+            </picker>
+            <text class="txt">至</text>
+            <picker fields="{{fields}}" mode="date" value="{{time.endTime}}" class="{{time.endTime ? 'ac' : ''}} end-time" start="{{defaultTime.start}}" end="{{defaultTime.end}}" bindchange="endTimeChange">
+                <view class="weui-input">{{time.endTime ? time.endTime : '结束日期'}}</view>
+            </picker>
+        </view>
+        <image bindtap='clearHandle' src="{{CDN}}icon_delete.png" class="icon" />
+        <text wx:if="{{fields !== 'month'}}" class="tip">目前仅支持查找12个月跨度的询盘记录</text>
+    </view>
+    <button class="confirm-btn gradient-bg" bindtap='confirmHandle'>完成</button>
+</view>

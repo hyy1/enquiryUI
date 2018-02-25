@@ -1,0 +1,41 @@
+/* pages/personal/bindPhone/bindPhone.wxss */
+.row{
+    display: flex;
+    height: 80rpx;
+    line-height: 80rpx;
+    overflow: hidden;
+    font-size: 28rpx;
+    justify-content: space-between;
+}
+.row input{
+    height: 80rpx;
+    flex: 1
+}
+.pic{
+    width: 24rpx;
+    height: 80rpx;
+    overflow: hidden;
+    margin-right: 16rpx;
+}
+.btn-yzm{
+    width: 200rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 24rpx;
+    border-radius: 3px;
+}
+.btn-bd{
+    height: 88rpx;
+    line-height: 88rpx;
+    border-radius: 3rpx;
+    font-size: 32rpx;
+    margin-top: 96rpx;
+}
+.btn-bd-default{
+    background: #CCCCCC;
+}
+.pic-yzm{
+    width: 160rpx;
+    height: 60rpx;
+    overflow: hidden;
+}

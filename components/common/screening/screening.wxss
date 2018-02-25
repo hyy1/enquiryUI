@@ -1,0 +1,130 @@
+/* components/common/screening/screening.wxss */
+
+/* 筛选器 */
+
+.screening {
+  background: #F6F6F6;
+  position: relative;
+  height: 70rpx;
+}
+
+.screening-header {
+  display: flex;
+  height: 70rpx;
+  padding: 0 30rpx;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+
+.screening .screening-nav {
+  flex: 1;
+  font-size: 26rpx;
+  color: #676767;
+  border-right: 1rpx solid #e0e0e0;
+}
+
+.screening .screening-nav:last-child {
+  border: none;
+}
+
+.screening .screening-nav.ac{
+  color: #fc7c1f;
+}
+
+.screening-nav .name {
+}
+
+.screening-nav .arrow {
+  position: relative;
+  width: 14rpx;
+  height: 100%;
+  margin-left: 12rpx;
+}
+
+.screening-nav .arrow::before, .screening-nav .arrow::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  border-left: 7rpx solid transparent;
+  border-right: 7rpx solid transparent;
+  border-bottom: 7rpx solid transparent;
+  border-top: 7rpx solid transparent;
+}
+
+.screening-nav .arrow::before {
+  top: 2rpx;
+  border-bottom-color: #999;
+}
+
+.screening-nav.ac .des .arrow::before {
+  border-bottom-color: #fc7c1f;
+}
+
+.screening-nav .arrow::after {
+  bottom: 2rpx;
+  border-top-color: #999;
+}
+
+.screening-nav.ac .asc .arrow::after {
+  border-top-color: #fc7c1f;
+}
+
+.screening-nav .arrow-drop {
+  position: relative;
+  width: 14rpx;
+  height: 100%;
+  margin-left: 12rpx;
+}
+
+.screening-nav .arrow-drop::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  border-left: 7rpx solid transparent;
+  border-right: 7rpx solid transparent;
+  border-bottom: 7rpx solid transparent;
+  border-top: 7rpx solid #999;
+}
+
+.screening-nav.ac .asc .arrow-drop::before,
+.screening-nav.ac .des .arrow-drop::before{
+  border-top-color: #fc7c1f;
+}
+
+/* .screening .content {
+  display: none;
+  position: absolute;
+  top: 70rpx;
+  left: 0;
+  right: 0;
+  background: #fcfcfc;
+  padding: 10rpx 30rpx 0;
+   box-shadow: 0 4rpx 8rpx 0 #e2e5ec; 
+}
+
+.screening .content.ac {
+  display: block;
+}
+
+.screening .content .item.ac {
+  color: #fc7c1f;
+}
+
+.screening .content .item {
+  font-size: 26rpx;
+  color: #999;
+  padding: 18rpx 0;
+  position: relative;
+}
+
+.screening .content .item .img {
+  width: 28rpx;
+  height: 20rpx;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+} */

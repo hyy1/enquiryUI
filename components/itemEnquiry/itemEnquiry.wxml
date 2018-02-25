@@ -1,0 +1,35 @@
+<!--components/itemEnquiry/itemEnquiry.wxml-->
+<navigator url="/pages/enquiry/info/info?id={{item.enquiryId}}">
+    <view class='item hr'>
+        <view class='pic pro-pic'>
+            <image mode='aspectFit' src='{{item.productImage || CDN+"icon-pro.png"}}'></image>
+        </view>
+        <view class='info'>
+            <view class='title'>
+                <text class="name">{{item.productName}}</text>
+                <text class="title-time">{{item.createTime}}</text>
+            </view>
+            <view class='nav'>
+                <view class='map'>
+                    <view class='pic map-pic'>
+                        <image mode='aspectFit' src='{{CDN}}localize.png'></image>
+                    </view>
+                    <view class='map-txt'>
+                        <text class='txt-more'>{{item.area}}</text>
+                    </view>
+                </view>
+                <view class='nav-btn'>
+                    <view class='btn btn{{item.saleStatus}}'>
+                        <text>{{saleStatusName[item.saleStatus]}}</text>
+                    </view>
+                    <view class='pic arrow'>
+                        <image mode='aspectFit' src='{{CDN}}icon_right.png'></image>
+                    </view>
+                </view>
+            </view>
+            <view class='mony'>
+                <text>￥{{item.amount}}</text>
+            </view>
+        </view>
+    </view>
+</navigator>

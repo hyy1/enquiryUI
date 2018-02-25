@@ -1,0 +1,30 @@
+<view class="kingwords">
+    <component-no-data text="暂无数据" wx:if="{{list.length == 0}}"></component-no-data>
+    <view wx:else>
+        <text class="kingtxt">标王 ：{{params.keyword}}</text>
+        <view  wx:for="{{list}}" wx:key="index" class="{{item.isobtain!=1 ? 'block':'blockS'}}">
+            <view class="left">
+                <view class="topl">{{item.year}}</view>
+                <view class="bottoml">{{item.month}}</view>
+            </view>
+            <view class="right">
+                <view class="bottom red pic" wx:if="{{item.isobtain==1}}">
+                    <image mode='aspectFit' src="{{CDN}}keywords_red.png" class="img"></image> 中标
+                </view>
+                <view class="top">
+                    中标金额（元）：
+                    <text class="red">{{item.finalprice}}</text>
+                </view>
+                <view class="b-txt" >
+                    <view class='txt'>中标公司：</view>
+                    <view class="black">{{item.dealcompany}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="bottom-line" wx:if="{{list.length > 5}}">
+            <view class="line"></view>
+            <view class="line-txt">我是有底线的</view>
+            <view class="line"></view>
+          </view>
+    </view>
+</view>

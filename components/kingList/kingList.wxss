@@ -1,0 +1,115 @@
+/* components/kingList/kingList.wxss */
+
+/* 标王详情 */
+
+.king-detail {
+  min-height: 295rpx;
+  width: 704rpx;
+  margin: 0 auto;
+  margin-top: 16rpx;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.king-detail .detail-head {
+  min-height: 87.8rpx;
+  width: 100%;
+  background: #f4f9fc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.king-detail .detail-head .head-left {
+  display: flex;
+  align-items: center;
+  margin-left: 38rpx;
+  min-height: 53rpx;
+  overflow: hidden;
+  flex: 1;
+}
+
+.king-detail .detail-head .head-left .key-words {
+  margin-left: 18rpx;
+  margin-right: 18rpx;
+  line-height: 53rpx;
+  font-size: 28rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+}
+
+.king-detail .detail-head .img image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 10rpx;
+}
+
+.king-detail .detail-head .head-right {
+  width: 112rpx;
+  height: 40rpx;
+  font-size: 24rpx;
+  color: #6495f9;
+  margin-right: 57rpx;
+  background: #e7ebed;
+  border-radius: 22px;
+  text-align: center;
+}
+
+.king-detail .head-right text {
+  text-align: center;
+  line-height: 40rpx;
+}
+
+.king-detail .detail-content {
+  font-size: 28rpx;
+  margin: 0 26rpx;
+}
+
+.king-detail .detail-content .top {
+  min-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.king-detail .detail-content .top .content-left {
+  margin-left: 10rpx;
+  color: #666;
+  width: 292rpx;
+}
+
+.king-detail .detail-content .top-company {
+  margin-top: -20rpx;
+}
+
+.king-detail .detail-content .top .content-right-money {
+  font-size: 30rpx;
+  margin-right: 10rpx;
+  color: #f44;
+}
+
+.king-detail .detail-content .top .content-right-company {
+  margin-right: 10rpx;
+  color: #333;
+  padding-bottom: 30rpx;
+}
+
+.king-detail .detail-link {
+  height: 90rpx;
+  font-size: 28rpx;
+  color: #999;
+  display: flex;
+  margin: 0 36rpx;
+  border-top: 1px dashed #e0e0e0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.king-detail .detail-link .img image {
+  height: 28rpx;
+  width: 14rpx;
+}

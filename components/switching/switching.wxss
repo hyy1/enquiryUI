@@ -1,0 +1,68 @@
+/* components/switching/switching.wxss */
+/* 默认类型 */
+.page {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.switching {
+  background: #fff;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 6rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+}
+
+.switching .control-item {
+  float: left;
+  font-size: 26rpx;
+  color: #666;
+  width: 172rpx;
+  height: 72rpx;
+  border-left: 2rpx solid rgba(0, 0, 0, 0.1);
+}
+
+.switching .control-item.gradient-bg {
+  color: #fff;
+  border-color: #55abf6;
+  background-image: linear-gradient(-225deg, #55abf6 0%, #7b73fe 100%);
+}
+
+.switching .control-item:first-child {
+  border: none;
+}
+
+/* text类型 */
+.switch-tab {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+  border-bottom: 1rpx solid #E0E0E0;
+  background: #fff;
+}
+
+.switch-tab .switc-item {
+  flex: 1;
+}
+
+.switch-tab .switc-item.active {
+  color: #5167D3;
+  position: relative;
+}
+
+.switch-tab .switc-item.active::after{
+  content: '';
+  position: absolute;
+  width: 110rpx;
+  height: 4rpx;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-image: linear-gradient(-225deg, #55ABF6 0%, #7B73FE 100%);
+}

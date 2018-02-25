@@ -1,0 +1,40 @@
+/* components/analysisReport/analysisReport.wxss */
+.top{
+  /* position:fixed;
+  z-index:9999;
+  top:0rpx; */
+  width: 100%;  
+}
+.analysis-report{
+  font-size: 12px;
+  color: #333333;
+  background: #F9FCFC;
+  box-shadow: 0 0 0 0 #E0E0E0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.analysis-report .nav{
+  display: flex;
+  height: 71rpx;
+  justify-content:center;  
+  align-items: center;
+  width:100%;  
+}
+.analysis-report .img{
+  margin:0 30rpx; 
+  width: 40rpx;
+  height:40rpx;
+}
+.analysis-report .item{
+  line-height: 71rpx;
+}
+.analysis-report .active{
+  font-size: 13px;
+  color: #FC7C1F;
+  border-bottom:  1rpx solid #FC7C1F;
+}
+.analysis-report .line{
+  height: 33rpx;
+  border-right:1rpx solid #E0E0E0;
+}

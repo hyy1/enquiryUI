@@ -1,0 +1,58 @@
+<!--pages/home/analysisReport/operating/operating.wxml 运营建议-->
+<view>
+  <component-analysis-report active="2" bindselectReport="selectReport"></component-analysis-report>
+</view>
+<view class="operating">
+  <view class="books">
+    <!-- <view class="book">
+    </view> -->
+    <image class="img" mode="aspectFit" src="{{CDN}}icon_book.png" />
+  </view>
+  <view class="tittle">
+    <text class="txt">{{reportName}}运营建议报告</text>
+  </view>
+  <view class="header">
+    <view class="head">
+      <view class="pic">
+        <image mode="aspectFit" src="{{CDN}}lossPro.png" />
+      </view>
+      <text class="txt">流失主要产品</text>
+    </view>
+    <view class="content">
+        <text>{{operatingData.lossProducts}}</text>
+    </view>
+  </view>
+  <view class="header">
+    <view class="head">
+      <view class="pic">
+        <image class="img" mode="aspectFit" src="{{CDN}}store.png" />
+      </view>
+      <text class="txt">友商名称</text>
+    </view>
+    <view class="content">
+        <text>{{operatingData.friendsBusiness}}</text>
+    </view>
+  </view>
+  <view class="header">
+    <view class="head">
+      <view class="pic">
+        <image class="img" mode="aspectFit" src="{{CDN}}buyers.png" />
+      </view>
+      <text class="txt">买家反馈</text>
+    </view>
+    <view class="content">
+        <text>{{operatingData.buyerFeedback}}</text>
+    </view>
+  </view>
+  <view class="header">
+    <view class="head">
+      <view class="pic">
+        <image class="img" mode="aspectFit" src="{{CDN}}suggest.png" />
+      </view>
+      <text class="txt">建议</text>
+    </view>
+    <view class="content">
+        <text>{{operatingData.advice}}</text>
+         </view>
+  </view>
+</view>

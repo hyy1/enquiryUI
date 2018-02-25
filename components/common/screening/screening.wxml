@@ -1,0 +1,25 @@
+<!--components/common/screening/screening.wxml-->
+<view class="screening">
+  <view class="screening-header">
+    <view wx:for="{{data}}" wx:key="{{index}}" class="screening-nav {{(index == active || (item.type == 3 && cindex != -1)) ? 'ac' : ''}}" data-index="{{index}}" bindtap="clickHandle" wx:if="{{!(item.type == 3 && isDelte)}}">
+      <block wx:if="{{item.type == 3}}">
+        <view class="{{toggle[index].isDB ? 'asc name' : 'des name'}}">{{item.children[cindex]}}
+          <text class="{{item.classname}}"></text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="{{toggle[index].isDB ? 'asc name' : 'des name'}}">{{item.label}}
+          <text class="{{item.classname}}"></text>
+        </view>
+      </block>
+
+    </view>
+  </view>
+  <!-- <view class="content ac">
+      <view class="item">已成交</view>
+      <view class="item ac">跟进中
+        <image class="img" src="/images/2.1/icon_tick.png"></image>
+      </view>
+      <view class="item">未成交</view>
+    </view> -->
+</view>

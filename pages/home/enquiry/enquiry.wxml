@@ -1,0 +1,24 @@
+<!--pages/enquiry/enquiry.wxml-->
+<view class="enquiry {{isFixed ? 'fixed' : ''}}">
+  <view class="header">
+    <text class="text">询盘统计分析</text>
+    <component-date-control bindgetTime="getTimeEnquiry" active="{{params.timeType-1}}" />
+  </view>
+  <component-common-trading data="{{areaData}}" type="{{params.countType}}"></component-common-trading>
+  <view class="header">
+      <text class="text">询盘记录</text>
+    </view>
+    <component-common-screening isDelte="{{params.countType == 1 ? false : true}}" bindgetScreening="getScreening"/>
+  <view class='list'>
+    <itemEnquiry wx:for="{{list}}" wx:key="{{index}}" item="{{item}}"></itemEnquiry>
+  </view>
+  <view wx:if="{{list.length > 0 && (list.length == count) && isshowFooter}}" class="bottom-line">
+    <view class="line"></view>
+    <view class="line-txt">我是有底线的</view>
+    <view class="line"></view>
+  </view>
+  <view wx:if="{{list.length == 0}}" class="no-data">
+    <image src="{{CDN}}record_no.png" class="img" />
+    <text class="txt">{{msgStr}}</text>
+  </view>
+</view>

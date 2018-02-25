@@ -1,0 +1,134 @@
+/* components/common/trading/trading.wxss */
+
+/* 成交占比 */
+
+.trading {
+}
+
+/* .trading .header {
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4rpx 8rpx 0 #e2e5ec;
+}
+
+.trading .header .img {
+  width: 46rpx;
+  height: 46rpx;
+  position: absolute;
+  top: 50%;
+  left: -76rpx;
+  transform: translateY(-50%);
+}
+
+.trading .header .img image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.trading .header .text {
+  position: relative;
+}
+
+.trading .header .text .t1 {
+  font-size: 40rpx;
+  color: #172434;
+}
+
+.trading .header .text .t2 {
+  font-size: 22rpx;
+  color: #8e9091;
+} */
+
+.trading .section {
+  padding: 10rpx 30rpx;
+  background: #f1f4fb;
+  box-shadow: inset 0 -4rpx 8rpx 0 rgba(226, 229, 236, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  width: 100%;
+  min-height: 133rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  width: 56rpx;
+  height: 56rpx;
+}
+.item .text {
+  margin-left: 40rpx;
+  word-break: break-all;
+}
+
+.item .text .t1 {align-self: center;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.item .text .t2 {align-self: center;
+  font-size: 28rpx;
+  color: #cb2b2b;
+}
+
+.item .text .t3 {align-self: center;
+  font-size: 24rpx;
+  color: #666;
+}
+.trading .section .module {
+  width: 50%;
+  border-right: 2rpx solid rgba(224, 224, 224, 0.26);
+  border-bottom: 2rpx solid rgba(224, 224, 224, 0.26);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 17rpx;
+  padding-left: 95rpx;
+  padding-top: 13rpx;
+}
+
+.trading .section .module:nth-child(1) {
+  padding-top: 0;
+}
+
+.trading .section .module:nth-child(2) {
+  border-right: none;
+  padding-top: 0;
+}
+
+.trading .section .module:nth-last-child(2) {
+  border-bottom: none;
+  padding-bottom: 0;
+  padding-top: 13rpx;
+}
+
+.trading .section .module:nth-last-child(1) {
+  border-bottom: none;
+  border-right: none;
+  padding-bottom: 0;
+  padding-top: 13rpx;
+}
+
+.trading .section .module .text {
+  word-break: break-all;
+}
+
+.trading .section .module .text .t1 {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.trading .section .module .text .t2 {
+  font-size: 28rpx;
+  color: #cb2b2b;
+}
+
+.trading .section .module .text .t3 {
+  font-size: 24rpx;
+  color: #666;
+}

@@ -1,0 +1,14 @@
+<!--pages/home/analysisReport/has/has.wxml-->
+<view>
+  <component-analysis-report active="1" bindselectReport="selectReport"></component-analysis-report>
+</view>
+<component-no-data text="小喜正在统计中，敬请期待噢～" wx:if="{{has.length == 0}}"></component-no-data>
+<view wx:else>
+  <view class="has-tittle">
+    <text>2017年6月标王记录</text>
+  </view>
+  <view wx:for="{{winKing}}" wx:key="{{index}}">
+    <component-king-list keyword="{{item.keyword}}" isobtain="{{item.isobtain}}" finalprice="{{item.finalprice}}" dealcompany="{{item.dealcompany}}"
+      time="{{time}}" navLink="1"></component-king-list>
+  </view>
+</view>

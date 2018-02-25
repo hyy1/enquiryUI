@@ -1,0 +1,10 @@
+<!--components/switching/switching.wxml-->
+<view class="page" wx:if="{{species == 'default'}}">
+  <view class="switching">
+    <view wx:for="{{labels}}" wx:key="{{index}}" data-index="{{index}}" bindtap='clickHandle' class="{{acIndex == index ? 'gradient-bg' : ''}} control-item">{{item}}</view>
+  </view>
+</view>
+<view class='switch-tab' wx:if="{{species == 'text'}}">
+  <view wx:for="{{labels}}" wx:key="{{index}}" data-index="{{index}}" bindtap='clickHandle' class="{{acIndex == index ? 'active' : ''}} switc-item">{{item}}</view>
+</view>
+

@@ -1,0 +1,101 @@
+<!--pages/home/erp/orderInfo/orderInfo.wxml-->
+<!-- 订单详情 -->
+<view class="order-info">
+  <!-- 订单状态 -->
+  <view class="state">
+    <view class="title">{{info.statusStr || ''}}</view>
+    <!-- <view wx:if="{{info.closeReason}}" class="txt">备注原因：{{info.closeReason}}</view> -->
+  </view>
+  <!-- 个人信息 -->
+  <view class="person-mess">
+    <!-- 物流 -->
+    <view bindtap="goLogistics" wx:if="{{info.logisticsStepVo}}" class="logistics">
+      <view class="icon">
+        <image class="img" src="{{CDN}}icon_logistics.png"></image>
+      </view>
+      <view class="txt">
+        <view>{{info.logisticsStepVo.remark || ''}}</view>
+        <view class="time">{{info.logisticsStepVo.acceptTime || ''}}</view>
+      </view>
+      <view class="icon icon-arrow">
+        <image class="img" src="{{CDN}}icon_right.png"></image>
+      </view>
+    </view>
+    <!-- 详情 -->
+    <view class="details">
+      <view class="icon">
+        <image class="img" src="{{CDN}}icon_localize.40x40.png"></image>
+      </view>
+      <view class="txt">
+        <view class="name">{{info.receiverInfo.toFullName || ''}}</view>
+        <view wx:if="{{info.receiverInfo.toPhone}}" class="phone">{{info.receiverInfo.toPhone}}</view>
+        <view class="address">{{info.receiverInfo.toArea || ''}}</view>
+      </view>
+    </view>
+  </view>
+   <!-- <view class="border-img m-b-20">
+    <image class="img" src="{{CDN}}bg_border_bottom.png"></image>
+  </view>  -->
+  <!-- 商品信息 -->
+  <view class="goods-mess m-b-20" style='margin-top:20rpx;'>
+    <view class="title">{{info.buyerLoginId || ''}}</view>
+    <view class="list">
+      <block wx:for="{{info.productItems}}" wx:key="{{index}}">
+        <view bindtap="goGoodsInfo" class="item" data-product="{{item.productID}}">
+          <view class="img">
+            <image src="{{item.productImgUrl || CDN+'icon-pro.png'}}"></image>
+          </view>
+          <view class="txt">
+            <view class="txt-name">
+              <view class="left">{{item.name || ''}}</view>
+              <view class="right">￥{{item.price || 0}}</view>
+            </view>
+            <view class="txt-attr">
+              <view class="left txt-more">{{item.skuInfos || ''}}</view>
+              <view class="right">{{item.quantity+item.unit}}</view>
+            </view>
+            <view wx:if="{{item.refundStatus}}" class="btn">退款中</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 价格信息 -->
+  <view class="price-mess m-b-20">
+    <!-- <view class="txt">
+      <view class="left">店铺优惠</view>
+      <view class="right">￥0.00</view>
+    </view> -->
+    <view class="txt">
+      <view class="left">货品总价（含优惠）</view>
+      <view class="right">￥{{info.sumProductPayment || 0}}</view>
+    </view>
+    <view class="txt">
+      <view class="left">运费</view>
+      <view class="right">￥{{info.shippingFee || 0}}</view>
+    </view>
+    <view class="txt realpay">
+      <view class="left">实付款（含运费）</view>
+      <view class="right">￥{{info.totalAmount || 0}}</view>
+    </view>
+  </view>
+  <!-- 交易信息 -->
+  <view class="trading-mess m-b-20">
+    <view class="txt">
+      <view class="left">交易合约</view>
+      <view class="right">{{info.qualityAssuranceType || ''}}</view>
+    </view>
+    <view class="txt">
+      <view class="left">支付方式</view>
+      <view class="right">{{info.payWayStr || ''}}</view>
+    </view>
+  </view>
+  <!-- 订单信息 -->
+  <view class="order-mess m-b-20">
+    <view wx:if="{{info.id}}">订单号： {{info.id}}</view>
+    <view wx:if="{{info.createTime}}">下单时间： {{info.createTime}}</view>
+    <view wx:if="{{info.payTime}}">付款时间： {{info.payTime}}</view>
+    <view wx:if="{{info.allDeliveredTime}}">发货时间： {{info.allDeliveredTime}}</view>
+    <view wx:if="{{info.receivingTime}}">收货时间： {{info.receivingTime}}</view>
+  </view>
+</view>

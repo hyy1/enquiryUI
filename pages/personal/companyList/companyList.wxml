@@ -1,0 +1,9 @@
+<!--pages/personal/companyList/companyList.wxml-->
+<view class='company'>
+  <view class='list-box'>
+    <view class='list' wx:for="{{lists}}" wx:for-index="index" wx:for-item="item" wx:key="index" data-aliAccountId="{{item.aliAccountId}}" bindtap='changeCompany'>
+      <text class='list_text'>{{item.name}}</text>
+      <image src='{{CDN}}icon_right.png' class='icon_right'/>
+    </view>
+  </view>
+</view>

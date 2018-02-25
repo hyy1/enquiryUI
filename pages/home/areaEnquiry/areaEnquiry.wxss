@@ -1,0 +1,20 @@
+/* pages/home/areaEnquiry/areaEnquiry.wxss */
+/* 顶部固定 */
+ .fixed component-screening {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+.fixed .list{
+  margin-top: 70rpx;
+} 
+
+.area-enquiry{
+  border-top: 1rpx solid #B2B2B2;
+}
+
+.list{
+  background: #fff;
+}

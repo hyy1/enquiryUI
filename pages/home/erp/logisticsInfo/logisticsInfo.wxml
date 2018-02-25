@@ -1,0 +1,91 @@
+<!--pages/home/erp/logisticsInfo/logisticsInfo.wxml-->
+<!-- 物流详情 -->
+<view class="header">
+  订单：
+  <text class="text">{{orderId}} 共包含{{params.length}}个运单</text>
+</view>
+
+
+<view class="lists">
+
+  <view class="list" wx:for="{{params}}" wx:for-index="showIndex" wx:key="{{index}}">
+    <view class="caption">
+      运单{{showIndex+1}}
+    </view>
+    <view class="content">
+      <view class="express-info">
+
+        <view class="info-tittle">
+          发货方式：
+          <text class="text">物流公司</text>
+        </view>
+        <view class="info-tittle">
+          物流公司：
+          <text class="text">{{item.logisticsCompanyName}}</text>
+        </view>
+        <view class="info-tittle">
+          运单号码：
+          <text class="text">{{item.logisticsBillNo}}</text>
+        </view>
+        <view class="info-tittle">
+          发货时间：
+          <text class="text">{{item.logisticsStepFirst.acceptTime}}</text>
+        </view>
+
+      </view>
+      <view class="commodity">
+        <block wx:for="{{item.aliProductVos}}" wx:key="{{index}}">
+          <view class="cell {{ index< (goodsList[showIndex]||2)  ? '' : 'hid'}}">
+            <view class="left">
+              <image mode="aspectFit" wx:if="{{item.productImage}}" src="{{item.productImage}}" />
+              <image mode="aspectFit" wx:else src="{{CDN}}icon-pro.png" />
+            </view>
+            <view class="right">
+              <view class="head">{{item.productName}}
+              </view>
+              <!-- <view bindtap='clickHandle' data-index="{{index}}" class="body {{show[index] == true ? '' : 'rotate'}}">包含1条规则
+                <image mode="aspectFit" src="{{CDN}}icon_right.png" />
+              </view> -->
+              <!-- <view class="{{show[index] == true ? '' : 'hid'}} footer"> -->
+                <!-- <block wx:for="{{item.rules}}" wx:key="{{index}}"> -->
+                <!-- <block>
+                  <view class="line">
+                    <view>{{item.left}}
+                    </view>
+                    <view>¥{{item.mid}}
+                    </view>
+                    <view>{{item.right}}{{item.uint}}
+                    </view>
+                  </view>
+                </block>
+              </view> -->
+            </view>
+          </view>
+        </block>
+        <view class="show" data-goodsList="{{showIndex}}" bindtap='showALL' wx:if="{{goodsList[showIndex]!=999999&&item.aliProductVos.length>2}}">
+          其他{{item.aliProductVos.length-2}}个货品
+          <image mode="aspectFit" src="{{CDN}}icon_right.png" />
+        </view>
+      </view>
+      <view class="express-detail">
+        <text class="tittle">物流跟踪</text>
+        <block wx:for="{{item.logisticsSteps}}" wx:key="{{index}}">
+          <view class="time">{{item.date}}
+            <block>
+              <view class="time-point">
+                <image mode="aspectFit" src="{{CDN}}icon_rate_select.png" wx:if="{{index==0}}"/>
+                <image mode="aspectFit" src="{{CDN}}icon_rate_unselect.png" wx:else/>
+                <text class="text {{index==0 ? '':'title'}}">{{item.time}} {{item.remark}}</text>
+              </view>
+            </block>
+          </view>
+        </block>
+      </view>
+      <view class="captions">
+        <text class="text">以上信息由物流公司提供，如无信息或疑问,\n请咨询 {{item.logisticsCompanyName}}</text>
+      </view>
+    </view>
+  </view>
+
+
+</view>

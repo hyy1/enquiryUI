@@ -1,0 +1,8 @@
+/* pages/home/analysisReport/has/has.wxss */
+.has-tittle {
+  font-size: 28rpx;
+  margin-top: 15rpx;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+}

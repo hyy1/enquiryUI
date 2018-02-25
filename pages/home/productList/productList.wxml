@@ -1,0 +1,43 @@
+<!--pages/home/productList/productList.wxml-->
+<view class="product-list {{isFixed ? 'fixed' : ''}}">
+  <!-- 搜索 -->
+  <component-searching url="{{searchUrl}}" label="{{searchLabel}}"></component-searching>
+  <!-- 切换标签 -->
+  <component-switching species="text" labels="{{tabLabels}}" acIndex="{{tabAcIndex}}" bindgetAcItem="getAcClass"></component-switching>
+  <!-- 时间切换 -->
+  <view class='switching'>
+    <component-switching labels="{{labels}}" acIndex="{{acIndex}}" bindgetAcItem="getAcItem"></component-switching>
+    <!-- 交易指数/趋势 -->
+    <image bindtap='setModal' class='img' src='{{CDN}}/icon_explain.png'></image>
+  </view>
+  <!-- 产品列表 -->
+  <view class="list">
+    <component-item-product class="item" wx:for="{{list}}" wx:key="{{index}}" item="{{item}}" order="{{index}}"></component-item-product>
+  </view>
+  <view wx:if="{{list.length > 0 && (list.length == count) && isshowFooter}}" class="bottom-line">
+    <view class="line"></view>
+    <view class="line-txt">我是有底线的</view>
+    <view class="line"></view>
+  </view>
+  <!-- 没数据 -->
+  <component-no-data text="{{msgStr}}" wx:if="{{list.length == 0}}"></component-no-data>
+</view>
+<!-- 弹窗 -->
+<view class="modal" wx:if="{{modal}}">
+  <view class="modal-content">
+    <view class="modal-header"></view>
+    <view class="modal-body">
+      <view class="section">
+        <view class="title">交易指数</view>
+        <view class="text">根据产品交易过程中的核心指标如订单数、买家数、支付件数、支付金额等，进行综合计算得出的数值。数值越大反映交易的热度越大，不等同于交易金额</view>
+      </view>
+      <view class="section">
+        <view class="title">交易趋势</view>
+        <view class="text">截止统计日的该供应产品的累计评价数</view>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view bindtap='setModal' class="confirm">我已了解</view>
+    </view>
+  </view>
+</view>

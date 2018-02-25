@@ -1,0 +1,123 @@
+/* pages/enquiry/enquiry.wxss */
+
+/* 顶部固定 */
+
+ .fixed component-screening {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+} 
+
+ .fixed .list {
+  margin-top: 70rpx;
+} 
+
+/* 时间 */
+
+.time-group{
+  display:flex;
+  padding:0 30rpx;
+  background:#fff;
+  border-top: 1rpx solid #b2b2b2;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+
+.time-range {
+  display: flex;
+  font-size: 26rpx;
+  color: #999;
+  text-align: center;
+  padding: 20rpx 0 15rpx;
+  background: #fff;
+  flex:1;
+  align-items:center;
+}
+
+.time-range .start-time, .time-range .end-time {
+  flex: 1;
+  /* border-bottom: 1rpx solid #e0e0e0; */
+}
+
+.time-range .start-time.ac, .time-range .end-time.ac {
+  color: #fc7c1f;
+  /* border-color: #fc7c1f; */
+}
+
+.time-range .start-time.ac .arrow-drop, .time-range .end-time.ac .arrow-drop {
+  position: relative;
+  width: 14rpx;
+  height: 20rpx;
+  margin-left: 12rpx;
+  display: inline-block;
+  font-size:28rpx;
+}
+
+.time-range .start-time.ac .arrow-drop::before,
+.time-range .end-time.ac .arrow-drop::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border-left: 7rpx solid transparent;
+  border-right: 7rpx solid transparent;
+  border-bottom: 7rpx solid transparent;
+  border-top: 7rpx solid #fc7c1f;
+}
+
+.time-range .txt {
+  font-size: 28rpx;
+  color: #333;
+  padding: 0 45rpx;
+}
+
+/* .buy-type {
+  display: flex;
+  padding: 12rpx 30rpx;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.buy-type .link-time {
+  margin-left: 20rpx;
+}
+
+.buy-type .img {
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+}
+
+.buy-type .time {
+  font-size: 20rpx;
+  color: #666;
+  float: right;
+  line-height: 40rpx;
+  margin-left: 10rpx;
+} */
+
+.list {
+  background-color: #fff;
+}
+
+/* 空数据 */
+
+.no-data {
+  text-align: center;
+  font-size: 28rpx;
+  color: #ccc;
+  margin-top: 212rpx;
+}
+
+.no-data .img {
+  display: block;
+  width: 190rpx;
+  height: 178rpx;
+  margin: auto;
+}
+
+.no-data .txt {
+  margin-top: 40rpx;
+  display: block;
+}

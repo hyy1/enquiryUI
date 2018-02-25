@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "询盘数据",
+    "usingComponents": {
+        "itemEnquiry": "/components/itemEnquiry/itemEnquiry",
+        "component-date-control": "/components/dateControl/dateControl",
+        "component-screening": "/components/common/screening/screening",
+        "component-trading": "/components/common/trading/trading"
+    },
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 10
+}

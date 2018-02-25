@@ -1,0 +1,234 @@
+/* components/itemEnquiry/itemEnquiry.wxss */
+.content{word-break:break-all;}
+/* 副标题 1 */
+
+.second-title {
+  color: #666;
+}
+
+/* 副标题 2 */
+
+.second-title2 {
+  color: #999;
+}
+
+/* 线的颜色 */
+
+.hr {
+  border-bottom: 1px solid;
+  border-color: #e0e0e0;
+}
+
+.top {
+  height: 230rpx;
+  color: #fff;
+  border-color: #55abf6;
+  background-image: linear-gradient(-225deg, #55abf6 0%, #7b73fe 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 23rpx;
+}
+
+.headerLeft {
+  padding-left: 80rpx;
+}
+
+.money, .status {
+  font-size: 32rpx;
+  color: #fff;
+  margin-top: 12rpx;
+  text-shadow: 0 2px 2px #2a60a0;
+}
+
+.buyer {
+  font-size: 26rpx;
+  color: #fff;
+  margin-top: 12rpx;
+  text-shadow: 0 2px 2px #2a60a0;
+}
+
+.moneyA {
+  color: #f8dd32;
+}
+
+.headerRight1 {
+  flex: 1;
+  text-align: right;
+  padding-right: 56rpx;
+  height: 172rpx;
+  background: url('http://1.img.dianjiangla.com/enquiryAssets/deal.png') no-repeat;
+  background-size: 110rpx 110rpx;
+  background-position: center right;
+  background-origin: content-box;
+}
+
+.headerRight2 {
+  flex: 1;
+  text-align: right;
+  height: 172rpx;
+  padding-right: 56rpx;
+  background: url('http://1.img.dianjiangla.com/enquiryAssets/documentary.png') no-repeat;
+  background-size: 110rpx 110rpx;
+  background-position: center right;
+  background-origin: content-box;
+}
+
+.headerRight3 {
+  flex: 1;
+  text-align: right;
+  height: 172rpx;
+  padding-right: 56rpx;
+  background: url('http://1.img.dianjiangla.com/enquiryAssets/loss.png') no-repeat;
+  background-size: 110rpx 110rpx;
+  background-position: center right;
+  background-origin: content-box;
+}
+
+.content {
+}
+
+.mains {
+  font-size: 26rpx;
+  height: auto;
+  width: 100%;
+}
+
+.record {
+  height: auto;
+  width: 100%;
+  margin-bottom: 20rpx;
+  background-color: #f2f2f2;
+}
+
+.record-section {
+  display: none;
+}
+
+.record.ac .record-section {
+  display: block;
+}
+
+.record.ac .recordT {
+  color: #fc7c1f;
+}
+
+.record.ac .img {
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.recordT {
+  padding-left: 52rpx;
+  background: url('http://1.img.dianjiangla.com/enquiryAssets/documentaryRecord.png') no-repeat left center;
+  background-size: 40rpx 30rpx;
+}
+
+.record.ac .recordP::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 30rpx;
+  right: 0;
+  height: 2rpx;
+  background: #e0e0e0;
+}
+
+.recordP {
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  padding: 0 30rpx;
+  display: flex;
+  position: relative;
+}
+
+.recordP-right {
+  text-align: right;
+  flex: 1;
+}
+
+.time {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.recordP-right .img {
+  width: 14rpx;
+  height: 28rpx;
+  margin-left: 36rpx;
+  margin-bottom: -4rpx;
+}
+
+.recordUl {
+  background-color: #fff;
+  height: auto;
+  padding: 0 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.recordList {
+  display: flex;
+  padding: 26rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.statusL {
+  color: #999;
+  width: 140rpx;
+  line-height: 40rpx;
+  word-wrap: break-word;
+}
+
+.statusR {
+  color: #333;
+  flex: 1
+}
+
+/* 补充样式 */
+
+.shrink {
+  position: relative;
+}
+
+.shrink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 2rpx;
+  background: #e0e0e0;
+}
+
+/* 空数据 */
+
+.no-data {
+  text-align: center;
+  font-size: 28rpx;
+  color: #ccc;
+  margin-top: 212rpx;
+}
+
+.no-data .img {
+  display: block;
+  width: 190rpx;
+  height: 178rpx;
+  margin: auto;
+}
+
+.no-data .txt {
+  margin-top: 40rpx;
+  display: block;
+}
+
+.pic-phone{
+    width: 152rpx;
+    height: 48rpx;
+}
+
+.txt-phone{
+    color: #6495F9;
+}

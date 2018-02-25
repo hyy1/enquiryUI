@@ -1,0 +1,38 @@
+<!--components/common/trading/trading.wxml-->
+<view class="trading">
+  <view class="section">
+    <block wx:if="{{type == '1'||type == 'area'}}">
+      <view class="module" wx:for="{{areaData}}" wx:key="{{index}}">
+        <view class="text">
+          <view class="t1">{{item.label}}</view>
+          <view class="t2">￥{{data[item.t1] || 0}}</view>
+          <view class="t3">{{data[item.t2] || 0}}笔</view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{type == 'area'}}">
+      <view class="module">
+        <view class="text">
+          <view class="t1">区域排名</view>
+          <view class="t2">{{data.ranking}}</view>
+        </view>
+      </view>
+      <view class="module">
+        <view class="text">
+          <view class="t1">成交占比</view>
+          <view class="t2">{{data.tranProportion ? data.tranProportion +'%' : '0%'}}</view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{type != 'area'&&type != '1'}}">
+        <view class="item" wx:for="{{areaData}}" wx:key="{{index}}" wx:if="{{type == index+1}}">
+          <image mode='aspectFit' src="{{images[item.t1]}}" class="img"></image>
+          <view class="text">
+            <view class="t1">{{item.label}}</view>
+            <view class="t2">￥{{data[item.t1] || 0}}</view>
+            <view class="t3">{{data[item.t2] || 0}}笔</view>
+          </view>
+        </view>
+      </block>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText":"",
+  "usingComponents": {
+    "component-no-data": "/components/noData/noData",
+    "component-king-list": "/components/kingList/kingList"
+},
+"enablePullDownRefresh": true,
+"onReachBottomDistance": 10
+}

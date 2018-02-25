@@ -1,0 +1,16 @@
+<!--pages/home/areaEnquiry/areaEnquiry.wxml-->
+<view class="area-enquiry {{isFixed ? 'fixed' : ''}}">
+  <component-title name="区域统计分析"></component-title>
+  <component-trading data="{{areaData}}" type="area"></component-trading>
+  <component-title name="询盘记录"></component-title>
+  <component-screening bindgetScreening="getScreening"></component-screening>
+  <view class='list'>
+    <itemEnquiry wx:for="{{list}}" wx:key="{{index}}" item="{{item}}"></itemEnquiry>
+  </view>
+  <view wx:if="{{list.length > 0 && (list.length == count) && isshowFooter}}" class="bottom-line">
+    <view class="line"></view>
+    <view class="line-txt">我是有底线的</view>
+    <view class="line"></view>
+  </view>
+  <component-no-data text="抱歉!没有找到符合条件的记录" wx:if="{{list.length == 0}}"></component-no-data>
+</view>

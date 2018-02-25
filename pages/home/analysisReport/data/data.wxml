@@ -1,0 +1,102 @@
+<!--pages/home/analysisReport/data/data.wxml-->
+
+<template name="titles">
+    <view class='row title'>
+        <view class='col flex1'>{{titles[0]}}</view>
+        <view class='col flex1'>{{titles[1]}}</view>
+        <view class='col flex1'>{{titles[2]}}</view>
+        <view class='col flex1'>{{titles[3]}}</view>
+    </view>
+</template>
+
+<template name="area">
+    <view class='row' wx:if="{{provinceId != 0}}">
+        <view class='col flex1'>{{name}}</view>
+        <view class='col flex1'>{{enquiryCount}}</view>
+        <view class='col flex1'>{{amount}}</view>
+        <view class='col flex1'>{{percent}}%</view>
+    </view>
+</template>
+
+<template name="product">
+    <view class='row' wx:if="{{productId != 0}}">
+        <view class='col flex1'>{{name}}</view>
+        <view class='col flex1'>{{enquiryCount}}</view>
+        <view class='col flex1'>{{companyPrice}}</view>
+        <view class='col flex1'>{{tradePrice}}</view>
+    </view>
+</template>
+
+<template name="lable">
+    <view class='lab lable{{pageType}}'>
+        <block wx:for='{{tabList}}' wx:key="index">
+            <view class='item-lable'>
+                <view class='item-lable-tu' style='background-color:{{colorType[index]}};'></view>
+                <view class='item-lable-txt'>{{item.name}}</view>
+            </view>
+        </block>
+    </view>
+</template>
+
+<template name="chart">
+    <view hidden='{{tabList.length > 0 ? false : true}}'>
+        <view class='canvas'>
+            <view class='title canvas-title'>{{title}}</view>
+            <canvas style="width: 100%; min-height: 640rpx;background:#fff;" canvas-id="{{canvasId}}"></canvas>
+            <template is="lable" data="{{tabList,colorType,pageType}}" />
+        </view>
+        <view class='sjx'>
+            <view class='pic'>
+                <image src='{{CDN}}/icon-sjx.png'></image>
+            </view>
+        </view>
+        <view class='enquiry'>
+            <view class='enquiry-tab'>
+                <template is="titles" data="{{titles}}" />
+                <template wx:for="{{tabList}}" wx:key="{{item}}" is="{{tabType}}" data="{{...item}}" />
+            </view>
+        </view>
+    </view>
+</template>
+
+<template name="noData">
+    <view class="no-data">
+        <image src="{{CDN}}record_no.png" class="img" />
+        <text class="txt">{{msgStr}}</text>
+    </view>
+</template>
+
+<view class='nav'>
+    <view bindtap='setPageType' data-pageType="1" class='flex1 col active1{{pageType}}'>
+        <view class='bor-right'>区域分析</view>
+    </view>
+    <view bindtap='setPageType' data-pageType="2" class='flex1 col active2{{pageType}}'>
+        <view class='bor-right'>高频产品分析</view>
+    </view>
+    <picker disabled="{{disabled}}" bindchange="bindPickerChange" value="{{index}}" range="{{times}}">
+        <view class='pic time'>
+            <image src='{{CDN}}/icon_date.png'></image>
+        </view>
+    </picker>
+</view>
+
+<view>
+    <view hidden="{{pageType == 2}}">
+        <view class="{{(area1.tabList.length > 0 || area2.tabList.length > 0) ? '' : 'hidden'}}">
+            <template is="chart" data="{{...area1,CDN,pageType}}" />
+            <template is="chart" data="{{...area2,CDN,pageType}}" />
+        </view>
+        <view class="{{(area1.tabList.length > 0 || area2.tabList.length > 0) ? 'hidden' : ''}}">
+            <template is="noData" data="{{CDN, msgStr}}" />
+        </view>
+    </view>
+    <view hidden="{{pageType == 1}}">
+        <view class="{{(product1.tabList.length > 0 || product2.tabList.length > 0) ? '' : 'hidden'}}">
+            <template is="chart" data="{{...product1,CDN,pageType}}" />
+            <template is="chart" data="{{...product2,CDN,pageType}}" />
+        </view>
+        <view class="{{(product1.tabList.length > 0 || product2.tabList.length > 0) ? 'hidden' : ''}}">
+            <template is="noData" data="{{CDN, msgStr}}" />
+        </view>
+    </view>
+</view>

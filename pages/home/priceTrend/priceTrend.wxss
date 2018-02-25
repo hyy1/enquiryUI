@@ -1,0 +1,133 @@
+/* pages/home/priceTrend/priceTrend.wxss */
+
+/* 时间切换 */
+
+.switching {
+  padding-top: 17rpx;
+  background: #fff;
+}
+
+/* 图表 */
+
+.canvas {
+  background: #fff;
+}
+
+canvas {
+  width: 100%;
+  height: 446rpx;
+  height: 540rpx;
+  background: #fff;
+}
+
+/* 数据列表 */
+
+.list {
+  padding: 0 30rpx 40rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.list::before {
+  content: '';
+  position: absolute;
+  top: -32rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  border-bottom: 18.4rpx solid #fff;
+  border-top: 18.4rpx solid transparent;
+  border-right: 18.4rpx solid transparent;
+  border-left: 18.4rpx solid transparent;
+}
+
+.list .item {
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+  border-bottom: 2rpx solid #e0e0e0;
+}
+
+.list .item:last-child {
+  border: none;
+}
+
+.list .item .label {
+  font-size: 28rpx;
+  color: #333;
+  position: relative;
+  padding-left: 54rpx;
+  flex: 2;
+  margin-left: 100rpx;
+}
+
+.list .item .label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 6rpx;
+  background: #9f73fb;
+}
+
+.list .item .value {
+  font-size: 32rpx;
+  flex: 1;
+  /* margin-left: 150rpx;  */
+  color: #9f73fb;
+  text-align: left;
+}
+
+/* 自定义六中颜色 */
+
+.list .item:nth-child(6n+1) .label::before {
+  background: #9f73fb;
+}
+
+.list .item:nth-child(6n+2) .label::before {
+  background: #52c187;
+}
+
+.list .item:nth-child(6n+3) .label::before {
+  background: #5d77e5;
+}
+
+.list .item:nth-child(6n+4) .label::before {
+  background: #f27a52;
+}
+
+.list .item:nth-child(6n+5) .label::before {
+  background: #f1b93e;
+}
+
+.list .item:nth-child(6n) .label::before {
+  background: #be9f46;
+}
+
+.list .item:nth-child(6n+1) .value {
+  color: #9f73fb;
+}
+
+.list .item:nth-child(6n+2) .value {
+  color: #52c187;
+}
+
+.list .item:nth-child(6n+3) .value {
+  color: #5d77e5;
+}
+
+.list .item:nth-child(6n+4) .value {
+  color: #f27a52;
+}
+
+.list .item:nth-child(6n+5) .value {
+  color: #f1b93e;
+}
+
+.list .item:nth-child(6n) .value {
+  color: #be9f46;
+}

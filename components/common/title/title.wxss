@@ -1,0 +1,30 @@
+/* components/common/title/title.wxss */
+.header {
+  width: 100%;
+  height: 72rpx;
+  line-height: 72rpx;
+  padding: 0 30rpx;
+  background: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header .text {
+  font-size: 28rpx;
+  line-height: 1;
+  color: #333;
+  padding-left: 24rpx;
+  position: relative;
+}
+
+.header .text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 6rpx;
+  height: 24rpx;
+  background: #444;
+}

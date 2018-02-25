@@ -1,0 +1,29 @@
+<!--pages/searchWord/searchWord.wxml-->
+<view class="search-word">
+  <!-- 搜索 -->
+  <view class="form">
+    <view class="form-group">
+      <!-- <icon type="search" size="15" color="#999" /> -->
+      <input focus bindinput="searchHandle" class="form-control" value="{{searchName}}" placeholder="产品关键词" />
+      <image wx:if="{{searchName != ''}}" bindtap="delSearch" class="del" src="{{CDN}}/icon_search_del.png"></image>
+    </view>
+    <a bindtap="back" class="cancle">取消</a>
+  </view>
+  <!-- 内容 -->
+  <view class="content">
+    <!-- 热词搜索 -->
+    <view class="hot-word" wx:if="{{list.length > 0 && searchName == ''}}">
+      <view class="title">热词搜索</view>
+      <view class="words">
+        <view bindtap='jumpPage' class="word" wx:for="{{list}}" wx:key="{{index}}" data-categoryName="{{item.text}}" data-categoryId="{{item.id}}" data-classify="{{item.classify}}">{{item.text}}</view>
+      </view>
+    </view>
+    <!-- 搜索列表 -->
+    <view class="list">
+      <view bindtap='jumpPage' class="item" wx:for="{{result}}" wx:key="{{index}}" data-categoryName="{{item.text}}" data-categoryId="{{item.id}}" data-classify="{{item.classify}}">{{item.text}}</view>
+    </view>
+    <!-- 没数据 -->
+    <component-no-data text="小喜暂未查到关键词" wx:if="{{searchName && result.length == 0}}"></component-no-data>
+    <component-no-data imgUrl="{{CDN + 'record_no_search.png'}}" text="请输入产品关键词" wx:if="{{searchName == '' && list.length == 0 && result.length == 0}}"></component-no-data>
+  </view>
+</view>

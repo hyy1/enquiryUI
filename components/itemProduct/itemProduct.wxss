@@ -1,0 +1,102 @@
+/* components/itemProduct1/itemProduct.wxss */
+
+.item-product {
+}
+
+.mess {
+  display: flex;
+  padding: 18rpx 30rpx;
+}
+
+.mess .order {
+  width: 38rpx;
+  height: 38rpx;
+  border: 2rpx solid #fc8b1f;
+  border-radius: 50%;
+  align-self: center;
+  font-size: 22rpx;
+  line-height: 38rpx;
+  text-align: center;
+  color: #fc8b1f;
+  margin-right: 30rpx;
+}
+
+.mess .order-img{
+  align-self: center;
+  margin-right: 30rpx;
+}
+.mess .order-img image{
+  width: 36rpx;
+  height: 46rpx;
+  display: block;
+}
+
+.mess .img {
+  width: 180rpx;
+  height: 182rpx;
+  display: block;
+  align-self: center;
+  margin-right: 30rpx;
+}
+
+.mess .text {
+  flex: 1;
+  font-size: 24rpx;
+  position: relative;
+}
+
+.mess .text .text-p {
+  color: #333;
+  margin-bottom: 10rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break:break-all;
+  width: 414rpx;
+}
+
+.mess .text .text-company {
+  color: #999;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  word-break:break-all;
+}
+
+.mess .text .money {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 28rpx;
+  color: #f44;
+}
+
+.index {
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: right;
+  background: #fffbf9;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.index .trend{
+  display: inline;
+}
+.index .trend .number{
+  padding-right: 0;
+}
+.index .trend .img{
+  width: 26rpx;
+  height: 24rpx;
+  padding-right: 43.8rpx;
+}
+
+.index .number {
+  font-size: 28rpx;
+  color: #f44;
+  margin-left: 10rpx;
+  padding-right: 30rpx;
+}

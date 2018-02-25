@@ -1,0 +1,71 @@
+/* pages/home/analysisReport/operating/operating.wxss */
+.operating {
+  background: #ffffff;
+  min-height: 970rpx;
+  width: 690rpx;
+  margin: 0 auto;
+  margin-top: 18rpx;
+  padding-bottom: 90rpx;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  position: relative;
+}
+.operating .books {
+  width: 91.8rpx;
+  height: 90rpx;
+  position: absolute;
+  bottom: -10rpx;
+  right:-12rpx;  
+  background-color: #f2f2f2;
+  border-radius: 3px;
+}
+/* .operating .book {
+  width: 0px;
+  height: 0px;
+  border-color: #f2f2f2 #84baef;
+  border-width: 0px 0px 91.8rpx 90rpx;
+  border-style: solid;
+} */
+.operating .img {
+  width: 91.8rpx;
+  height: 90rpx;
+}
+.operating .tittle {
+  display: flex;
+  justify-content: center;
+}
+.operating .tittle .txt {
+  font-size: 14px;
+  color: #333333;
+  margin-top: 36rpx;
+}
+.operating .header {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0 52rpx;
+  margin-top: 31rpx;
+  border-bottom: 1px solid #E0E0E0;
+}
+.operating .header .head {
+  display: flex;
+  justify-content: flex-start;
+}
+.operating .header .content {
+  font-size: 14px;
+  min-height: 93rpx;
+  display: flex;
+  align-items: center;
+  color: #333333;
+  line-height:50rpx;  
+}
+.operating .header .head .pic image{
+  width: 30rpx;
+  height: 38rpx;
+  float: left;  
+}
+.operating .header .head .txt {
+  margin-left: 13rpx;
+  font-size: 14px;
+  color: #999999;
+}

@@ -1,0 +1,99 @@
+/* pages/home/productList/productList.wxss */
+
+/* 顶部固定 */
+.fixed .switching {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+.fixed .list{
+  margin-top: 112rpx;
+}
+
+/* 时间切换 */
+
+.switching {
+  position: relative;
+  background: #fff;
+  padding: 16rpx 0 20rpx;
+}
+
+.switching .img {
+  width: 44rpx;
+  height: 44rpx;
+  position: absolute;
+  top: 0;
+  right: 30rpx;
+  bottom: 4rpx;
+  margin: auto;
+}
+
+/* 产品列表 */
+
+.list {
+  margin-top: 8rpx;
+  background: #fff;
+}
+
+.list .item {
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+/* 弹窗 */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal-content {
+  width: 560rpx;
+  margin: auto;
+  margin-top: 250rpx;
+  background: #fff;
+  border-radius: 18rpx;
+}
+
+.modal-body {
+  padding: 30rpx 70rpx 50rpx;
+}
+
+.modal-body .section {
+  text-align: center;
+  margin-bottom: 52rpx;
+}
+
+.modal-body .section:last-child {
+  margin: 0;
+}
+
+.modal-body .section .title {
+  font-size: 36rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.modal-body .section .text {
+  font-size: 28rpx;
+  color: #999;
+  text-align: left;
+}
+
+.modal-footer {
+}
+
+.modal-footer .confirm {
+  font-size: 36rpx;
+  color: #5167d3;
+  width: 100%;
+  padding: 20rpx 0 30rpx;
+  text-align: center;
+  border-top: 1rpx solid #e5e5e5;
+}

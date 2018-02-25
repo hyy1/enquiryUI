@@ -1,0 +1,24 @@
+<!--pages/home/priceTrend/priceTrend.wxml-->
+<view class="price-trend">
+  <!-- 搜索 -->
+  <component-searching url="{{searchUrl}}" label="{{searchLabel}}"></component-searching>
+  <!-- 时间切换 -->
+  <view class='switching'>
+    <component-switching labels="{{labels}}" acIndex="{{acIndex}}" bindgetAcItem="getAcItem"></component-switching>
+  </view>
+  <view hidden="{{list.length == 0}}">
+    <!-- 图表 -->
+    <view class="canvas">
+      <canvas canvas-id="columnCanvas" class="canvas"></canvas>
+    </view>
+    <!-- 数据列表 -->
+    <view class="list">
+      <view wx:for="{{list}}" wx:key="{{index}}" class="item">
+        <view class="label">{{item.name}}</view>
+        <view class="value">{{item.value}}%</view>
+      </view>
+    </view>
+  </view>
+  <!-- 没数据 -->
+  <component-no-data wx:if="{{list.length == 0}}" text="{{msgStr}}"></component-no-data>
+</view>

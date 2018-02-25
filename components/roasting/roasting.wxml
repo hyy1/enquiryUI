@@ -1,0 +1,8 @@
+<!--pages/components/roasting.wxml-->
+<swiper style='height: {{height}}' class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}">
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image mode="widthFix" src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>

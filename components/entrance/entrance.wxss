@@ -1,0 +1,36 @@
+/* components/entrance/entrance.wxss */
+/* 入口导航 */
+
+.entrance {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  background: #fff;
+  padding: 38rpx 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.entrance .nav {
+  /* flex: 1; */
+  width: 228rpx;
+  margin-bottom: 48rpx;
+}
+.entrance .nav:nth-child(4),
+.entrance .nav:nth-child(5),
+.entrance .nav:nth-child(6){
+  margin: 0;
+}
+
+.entrance .nav .img {
+  width: 54rpx;
+  height: 54rpx;
+  display: block;
+  margin: auto;
+}
+
+.entrance .nav .txt {
+  font-size: 24rpx;
+  color: #000;
+  display: block;
+  margin-top: 20rpx;
+}

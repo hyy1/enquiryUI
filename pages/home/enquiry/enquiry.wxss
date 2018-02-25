@@ -1,0 +1,95 @@
+/* pages/enquiry/enquiry.wxss */
+/* 顶部固定 */
+ .fixed component-common-screening {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+.fixed .list{
+  margin-top: 70rpx;
+} 
+
+.banner {
+  width: 100%;
+  height: 160rpx;
+}
+.header {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 30rpx;
+  background: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header .text {
+  font-size: 28rpx;
+  line-height: 1;
+  color: #333;
+  padding-left: 24rpx;
+  position: relative;
+}
+
+.header .text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 6rpx;
+  height: 24rpx;
+  background: #444;
+}
+component-date-control {
+  position: absolute;
+  top: 0;
+  right: 30rpx;
+}
+
+.buy-type {
+  display: flex;
+  padding: 0 30rpx;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666;
+  height: 72rpx;
+}
+
+.buy-type .left {
+  flex: 1;
+}
+
+.buy-type .right {
+  flex: 1;
+  text-align: right;
+}
+
+.list {
+  background-color: #fff;
+  /* margin-top: 18rpx; */
+}
+
+/* 空数据 */
+
+.no-data {
+  text-align: center;
+  font-size: 28rpx;
+  color: #ccc;
+  margin-top: 212rpx;
+}
+
+.no-data .img {
+  display: block;
+  width: 190rpx;
+  height: 178rpx;
+  margin: auto;
+}
+
+.no-data .txt {
+  margin-top: 40rpx;
+  display: block;
+}

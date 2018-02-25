@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/personal/personal",
+    "pages/home/erp/myGoods/myGoods",
+    "pages/home/home",
+    "pages/enquiry/enquiry",
+    "pages/enquiry/info/info",
+    "pages/enquiry/time/time",
+    "pages/searchWord/searchWord",
+    "pages/home/enquiry/enquiry",
+    "pages/home/winKing/winKing",
+    "pages/home/winKing/KeywordsDetails/KeywordsDetails",
+    "pages/home/priceTrend/priceTrend",
+    "pages/home/productList/productList",
+    "pages/personal/bindPhone/bindPhone",
+    "pages/home/analysisReport/has/has",
+    "pages/home/analysisReport/index/index",
+    "pages/home/analysisReport/operating/operating",
+    "pages/home/analysisReport/data/data",
+    "pages/personal/companyList/companyList",
+    "pages/home/areaEnquiry/areaEnquiry",
+    "pages/home/erp/orderInfo/orderInfo",
+    "pages/home/erp/logisticsInfo/logisticsInfo",
+    "pages/home/erp/goodsInfo/goodsInfo",
+    "pages/home/erp/myOrder/myOrder"
+  ],
+  "window": {
+    "backgroundColor": "#f2f2f2",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "四喜E伙伴",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a4aab3",
+    "selectedColor": "#6495f9",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "selectedIconPath": "images/home.png",
+        "iconPath": "images/home_2.png"
+      },
+      {
+        "pagePath": "pages/enquiry/enquiry",
+        "text": "询盘",
+        "selectedIconPath": "images/personal.png",
+        "iconPath": "images/personal_2.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "selectedIconPath": "images/enquiry.png",
+        "iconPath": "images/enquiry_2.png"
+      }
+    ]
+  }
+}

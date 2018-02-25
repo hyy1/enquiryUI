@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "询盘记录",
+  "usingComponents": {
+    "itemEnquiry": "/components/itemEnquiry/itemEnquiry",
+    "component-title": "/components/common/title/title",
+    "component-trading": "/components/common/trading/trading",
+    "component-screening": "/components/common/screening/screening",
+    "component-no-data": "/components/noData/noData"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 10
+}

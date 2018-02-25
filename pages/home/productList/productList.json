@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "产品排行",
+  "usingComponents": {
+    "component-item-product": "/components/itemProduct/itemProduct",
+    "component-switching": "/components/switching/switching",
+    "component-searching": "/components/searching/searching",
+    "component-no-data": "/components/noData/noData"
+  },
+  "enablePullDownRefresh": true
+}

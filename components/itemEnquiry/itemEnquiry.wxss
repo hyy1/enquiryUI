@@ -1,0 +1,150 @@
+/* components/itemEnquiry/itemEnquiry.wxss */
+
+/* 副标题 1 */
+
+.second-title {
+    color: #666;
+}
+
+/* 副标题 2 */
+
+.second-title2 {
+    color: #999;
+}
+
+/* 线的颜色 */
+
+.hr {
+    border-bottom: 1px solid;
+    border-color: #e0e0e0;
+}
+
+.pic image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.item {
+    padding: 20rpx 30rpx;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.title {
+    font-size: 24rpx;
+    color: #333;
+    max-height: 60rpx;
+    line-height: 30rpx;
+    overflow: hidden;
+    display: flex;
+}
+.title .name{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break:break-all;
+  width:300rpx;
+}
+.title-time{
+  font-size: 22rpx;
+  color: #666666;
+  opacity: 0.5;
+  flex: 1;
+  min-width: 124rpx;
+  text-align: right;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 40rpx;
+    margin: 11rpx 0;
+}
+
+.map {
+    font-size: 24rpx;
+    line-height: 40rpx;
+    display: flex;
+    color: #999;
+    align-items: center;
+}
+
+.nav-btn {
+    font-size: 24rpx;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 132rpx;
+}
+
+.nav-btn .btn {
+    background-color: #fff;
+    width: 108rpx;
+    height: 42rpx;
+    overflow: hidden;
+    text-align: center;
+    line-height: 42rpx;
+    border-radius: 54rpx;
+    border: 1px solid #619AFA;
+    color: #619AFA;
+    margin-right:15rpx;
+}
+
+.nav-btn .btn1 {
+  color: #33cc82;
+  border-color: #33cc82;
+}
+
+.nav-btn .btn2 {
+    /* color: #33cc82;
+    border-color: #33cc82; */
+}
+
+.nav-btn .btn3,
+.nav-btn .btn4 {
+    color: #f56364;
+    border-color: #f56364;
+}
+
+.map-pic {
+    width: 20rpx;
+    height: 40rpx;
+    margin-right: 15rpx;
+}
+.map-area{
+  width:330rpx;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.mony{
+    font-size: 32rpx;
+    color: #CB2B2B;
+}
+.arrow {
+    width: 14rpx;
+    height: 40rpx;
+}
+
+.pro-pic {
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 30rpx;
+}
+
+.map-txt{
+    overflow: hidden;
+    line-height: 42rpx;
+    height: 42rpx;
+    flex: 1;
+}

@@ -1,0 +1,8 @@
+<!--components/noData/noData.wxml-->
+<view wx:if="{{type == 'img'}}" class="no-data">
+  <image src="{{imgUrl || CDN+'record_no.png'}}" class="img" />
+  <text class="txt">{{text}}</text>
+</view>
+<view wx:if="{{type == 'text'}}" class="no-data no-data-text">
+  <text class="txt">{{text}}</text>
+</view>

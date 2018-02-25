@@ -1,0 +1,15 @@
+<!--components/analysisReport/analysisReport.wxml-->
+<view class="top">
+  <view class="analysis-report">
+    <navigator wx:for="{{data}}" wx:key="{{index}}" data-index="{{index}}"url="{{active == index ? '' : item.url}}" bindtap='clickHandle'
+      open-type="redirect" class="{{active == index ? 'active' : ''}} item nav">
+      <view class="nav">{{item.label}}</view>
+      <view class="line"></view>
+    </navigator>
+    <picker bindchange="bindPickerChange" value="{{value}}" range="{{list}}" range-key="reportName">
+      <view class="pic">
+        <image class="img" mode="aspectFit" src="{{CDN}}icon_date.png" />
+      </view>
+    </picker>
+  </view>
+</view>

@@ -1,0 +1,39 @@
+/* components/noData/noData.wxss */
+
+/* 空数据 */
+
+.no-data {
+  text-align: center;
+  font-size: 28rpx;
+  color: #ccc;
+  margin-top: 212rpx;
+}
+
+.no-data .img {
+  display: block;
+  width: 190rpx;
+  height: 178rpx;
+  margin: auto;
+}
+
+.no-data .txt {
+  margin-top: 40rpx;
+  display: block;
+}
+
+/* text */
+
+.no-data.no-data-text {
+  padding-top: 40rpx;
+  background: #f2f2f2;
+  margin-top: 0;
+  text-align: left;
+  padding-left: 30rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.no-data.no-data-text .txt {
+  margin: 0;
+  padding-bottom: 20rpx;
+}

@@ -1,0 +1,7 @@
+<!--components/searching/searching.wxml-->
+<view class="search">
+<navigator url='{{url}}' open-type="redirect" class="searching">
+  <icon class="img" type="search" size="15" color="#999" />
+  <text class='label'>{{label}}</text>
+</navigator >
+</view>

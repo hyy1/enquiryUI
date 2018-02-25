@@ -1,0 +1,5 @@
+{
+    "navigationBarTitleText": "询盘详情",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 10
+}

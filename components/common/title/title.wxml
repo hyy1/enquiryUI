@@ -1,0 +1,4 @@
+<!--components/common/title/title.wxml-->
+<view class="header">
+  <text class="text">{{name}}</text>
+</view>

@@ -1,0 +1,24 @@
+/* pages/personal/companyList/companyList.wxss */
+.company{
+  padding-left: 30rpx;
+  background-color: #fff;
+  border-top: 1px solid #E0E0E0;
+}
+.list-box{
+  border-bottom: 1px solid #E0E0E0;
+}
+.list{
+  padding-right: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 110rpx;
+}
+.list_text{
+  color: #030303;
+  font-size: 32rpx;
+}
+.icon_right{
+  width: 14rpx;
+  height: 28rpx;
+}

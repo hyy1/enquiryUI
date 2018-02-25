@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "2017年整年度询盘分析报告",
+  "usingComponents": {
+    "component-no-data": "/components/noData/noData",
+    "component-analysis-report": "/components/analysisReport/analysisReport",
+    "component-king-list": "/components/kingList/kingList"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 10
+}

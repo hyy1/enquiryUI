@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "首页询盘记录",
+  "usingComponents": {
+    "component-roasting": "/components/roasting/roasting",
+    "itemEnquiry": "/components/itemEnquiry/itemEnquiry",
+    "component-date-control": "/components/dateControl/dateControl",
+    "component-common-trading": "/components/common/trading/trading",
+    "component-common-screening": "/components/common/screening/screening"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 10
+}

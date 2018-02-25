@@ -1,0 +1,158 @@
+/* pages/home/erp/goodsInfo/goodsInfo.wxss */
+.slide-image {
+  width: 100%;
+  height: 748rpx;
+}
+.goods {
+  min-height: 230rpx;
+  background: #ffffff;
+  padding: 16rpx 30rpx 0 30rpx;
+}
+.header {
+  min-height: 97rpx;
+}
+.header .txt {
+  font-size: 28rpx;
+  color: #333333;
+}
+.goods .content {
+  font-size: 24rpx;
+  color: #cb2b2b;
+}
+.goods .content .money {
+  font-size: 48rpx;
+}
+.goods .content .text {
+  margin-left: 16rpx;
+  color: #666666;
+}
+.footer {
+  font-size: 24rpx;
+  color: #aeaeae;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .txt {
+  line-height: 64rpx;
+}
+/* 商品头部 */
+.tittle {
+  height: 83rpx;
+  line-height: 83rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+  font-size: 14px;
+  color: #333333;
+}
+/* 商品规格 */
+.norm {
+  margin-top: 20rpx;
+  min-height: 254rpx;
+  background: #ffffff;
+  padding-left: 30rpx;
+}
+.norm .sub {
+  font-size: 28rpx;
+  margin: 30rpx 30rpx 0rpx 0;
+  padding-bottom: 30rpx;
+  color: #999999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.norm .sub .detail .line {
+  line-height: 52rpx;
+  display: flex;
+}
+.norm .sub .detail .line .name {
+  flex-shrink: 0;
+}
+.norm .sub .txt {
+  color: #151515;
+}
+.norm .sub .pic image {
+  transform: rotate(90deg);
+  transform-origin: center;
+  margin-left: 30rpx;
+  width: 36rpx;
+  height: 28rpx;
+}
+.norm .sub .rotate image{
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+/* <!-- 优惠信息 --> */
+.discount {
+  margin-top: 20rpx;
+  min-height: 176rpx;
+  background: #ffffff;
+  padding-left: 30rpx;
+}
+.discount .prefer {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+.discount .prefer .left {
+  font-size: 20rpx;
+  padding: 6rpx 20rpx;
+  background: #fff6e7;
+  border-radius: 3px;
+  color: #fc7c1f;
+}
+.discount .prefer .right {
+  margin-left: 20rpx;
+}
+/* <!-- 产品属性 --> */
+.attr {
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 20rpx;
+  min-height: 462rpx;
+  background: #ffffff;
+  padding-left: 30rpx;
+}
+.attr .lists {
+  margin-top: 30rpx;
+  margin-right: 34rpx;
+}
+.attr .lists .list {
+  display: flex;
+  justify-content: flex-start;
+}
+.attr .lists .name {
+  line-height: 52rpx;
+  flex-shrink: 0;
+  width: 211rpx;
+}
+.attr .lists .txt {
+  line-height: 52rpx;
+}
+/* <!-- 买家服务 --> */
+.server {
+  margin-top: 20rpx;
+  min-height: 176rpx;
+  margin-bottom: 20rpx;
+  background: #ffffff;
+  padding-left: 30rpx;
+}
+.server .buyers {
+  min-height: 85rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.server .buyers .pic {
+  margin-right: 72rpx;
+  display:flex;  
+}
+.server .buyers image {
+  width: 36rpx;
+  height: 36rpx;
+}
+.server .buyers .txt {
+  font-size: 28rpx;
+  margin-left: 16rpx;
+}

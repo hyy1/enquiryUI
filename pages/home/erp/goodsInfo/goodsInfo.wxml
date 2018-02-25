@@ -1,0 +1,102 @@
+<!--pages/home/erp/goodsInfo/goodsInfo.wxml-->
+<!-- 商品详情图片 -->
+<swiper indicator-dots="true" autoplay="false" interval="5000" duration="500" style="height:748rpx;width:100%;">
+  <block wx:for="{{params.images}}">
+    <swiper-item>
+      <image src="{{ALI}}{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 商品标题和价格 -->
+<block>
+  <view class="goods">
+    <view class="header">
+      <text class="txt">{{params.subject}}</text>
+    </view>
+    <view class="content">
+      <block wx:if="{{params.minPrice}}">
+        ￥
+        <text class="money">{{params.minPrice}}</text>
+        -</block>￥
+      <text class="money">{{params.maxPrice}}</text>
+      <text class="text">≥{{params.minOrderQuantity}} {{params.unit}}起批</text>
+    </view>
+    <view class="footer">
+      <view>
+        <text class="txt">库存{{params.amountOnSale}}个</text>
+      </view>
+      <view>
+        <text class="txt" wx:if="{{params.freightTemplate==1}}">卖家包邮</text>
+        <text class="txt" wx:else>运费待议</text>
+      </view>
+      <view>
+        <text class="txt">发货地:{{params.provinceName}}{{params.cityName}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+<!-- 商品规格 -->
+<view class="norm">
+  <view class="tittle">
+    <text class="txt">产品规格</text>
+  </view>
+  <view class="sub">
+    <view class="{{show == 0 ? 'txt-more' : ''}} detail">
+      <view class="line" wx:for="{{params.skuList}}">
+        <view class="name">
+          {{item.attributeName}}：
+        </view>
+        <text class="{{show == 0 ? 'txt-more' : ''}} txt">{{item.attributeValue}}</text>
+      </view>
+      <!-- <view class="line">
+        <view class="name">
+          规格：
+        </view>
+        <text class="{{show == 0 ? 'txt-more' : ''}} txt">20*2.3冷121水管；25*2.3冷水管；25*2.8冷20*2.3冷水管；25*2.3冷水管；25*2.8冷20*2.3冷水管；25*2.3冷水管；25*2.8冷20*2.3冷水管；25*2.3冷水管；25*2.8冷20*2.3冷水管；25*2.3冷水管；25*2.8冷</text>
+      </view> -->
+    </view>
+    <view class="{{show == 1 ? 'rotate' : ''}} pic" bindtap='showNorm' wx:if="{{params.skuList}}">
+      <image mode="aspectFit" src="{{CDN}}icon_right.png" />
+    </view>
+  </view>
+</view>
+<!-- 优惠信息 -->
+<!-- <view class="discount">
+  <view class="tittle">
+    <text class="txt">优惠信息</text>
+  </view>
+  <view class="prefer">
+    <text class="left">混批</text>
+    <text class="right">全店满600元或600个可混批采购</text>
+  </view>
+</view> -->
+<!-- 产品属性 -->
+<view class="attr">
+  <view class="tittle">
+    <text class="txt">产品属性</text>
+  </view>
+  <view class="lists">
+    <view class="list" wx:for="{{params.list}}">
+      <view class="name">
+        {{item.attributeName}}：
+      </view>
+      <text class="txt">{{item.attributeValue}}</text>
+    </view>
+  </view>
+</view>
+<!-- 买家服务 -->
+<view class="server">
+  <view class="tittle">
+    <text class="txt">买家服务</text>
+  </view>
+  <view class="buyers">
+    <view class="pic">
+      <image mode="aspectFit" src="{{CDN}}icon_true.png" />
+      <text class="txt">免费赊账</text>
+    </view>
+    <!-- <view class="pic">
+      <image mode="aspectFit" src="{{CDN}}icon_true.png" />
+      <text class="txt">江浙沪包邮</text>
+    </view> -->
+  </view>
+</view>

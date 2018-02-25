@@ -1,0 +1,42 @@
+<!--components/kingList/kingList.wxml-->
+<view class="king-detail">
+  <view class="detail-head">
+    <view class="head-left txt-more">
+      <view class="img pic">
+        <image mode="aspectFit" src="{{CDN}}keywords.png" />
+      </view>
+      <text class="key-words">{{keyword}}</text>
+    </view>
+    <view class="head-right" wx:if="{{isobtain==1}}">
+      <text>{{isobtains[isobtain]}}</text>
+    </view>
+  </view>
+  <view class="detail-content">
+    <view class="top">
+      <view class="content-left">
+        <text>中标金额（元）：</text>
+      </view>
+      <view class="content-right-money">
+        <text>{{finalprice}}</text>
+      </view>
+    </view>
+    <view class="top top-company">
+      <view class="content-left">
+        <text>中标公司：</text>
+      </view>
+      <view class="content-right-company">
+        <text>{{dealcompany}}
+        </text>
+      </view>
+    </view>
+  </view>
+  <navigator url="/pages/home/winKing/KeywordsDetails/KeywordsDetails?time={{time}}&keyword={{keyword}}" wx:if="{{navLink==1}}">
+    <view class="detail-link">
+      <text>标王往期详情
+      </text>
+      <view class="img pic">
+        <image mode="aspectFit" src="{{CDN}}icon_right.png" />
+      </view>
+    </view>
+  </navigator>
+</view>
